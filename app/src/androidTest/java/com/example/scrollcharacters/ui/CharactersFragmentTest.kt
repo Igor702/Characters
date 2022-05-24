@@ -10,7 +10,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.example.scrollcharacters.MainActivity
 import com.example.scrollcharacters.R
-import com.example.scrollcharacters.data.DataSource
+import com.example.scrollcharacters.network.DataSource
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
