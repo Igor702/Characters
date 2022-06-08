@@ -10,7 +10,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.example.scrollcharacters.MainActivity
 import com.example.scrollcharacters.R
-import com.example.scrollcharacters.network.DataSource
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,7 +19,6 @@ import org.junit.runner.RunWith
 @SmallTest
 class CharactersFragmentTest{
 
-    val position = DataSource().loadData().lastIndex
 
 
 
@@ -34,7 +32,7 @@ class CharactersFragmentTest{
 
     @Test
     fun `scroll_to_last_position`(){
-        onView(withId(R.id.recycler_view)).perform(scrollToPosition<RecyclerView.ViewHolder>(position))
+        onView(withId(R.id.recycler_view)).perform(scrollToPosition<RecyclerView.ViewHolder>(1))
         onView(withText("Meeseeks")).check(matches(withText("Meeseeks")))
     }
 
